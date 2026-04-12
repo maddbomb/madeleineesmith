@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+.env
+.env.production
+
+# Local tooling — not part of the site
+.claude/
+.agents/
+skills-lock.json
+.impeccable.md

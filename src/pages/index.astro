@@ -1,0 +1,84 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Madeleine Smith"
+  description="Research brain, curious about everything, still asking questions."
+>
+  <header class="intro">
+    <h1>Madeleine Smith</h1>
+    <p class="tagline">Research brain, curious about everything, still asking questions.</p>
+  </header>
+
+  <section class="lede" aria-label="About">
+    <img class="portrait" src="/maddy.png" alt="Madeleine Smith" />
+    <div class="lede-body">
+      <span class="accent-bar" aria-hidden="true"></span>
+      <p>
+        Nonprofit evaluation researcher turned tech-curious person. I live in San
+        Francisco with my husband and two cats. I care about the planet more than
+        most other things. This is where I write about what I'm learning.
+      </p>
+    </div>
+  </section>
+
+  <section class="group" aria-labelledby="projects-label">
+    <h2 class="group-label" id="projects-label">Projects</h2>
+
+    <a class="project" href="https://www.calnature.app" target="_blank" rel="noopener">
+      <div class="project-hero">
+        <img src="/calnature-screenshot.png" alt="California Nature Dashboard — a map of California with rivers and reservoirs marked." />
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">California Nature Dashboard</h3>
+        <p class="project-desc">
+          A living survey of California's ecosystems — tides, rivers, reservoirs,
+          monarch migration, pollinators, and birds. Real-time data from NOAA, USGS,
+          eBird, and iNaturalist.
+        </p>
+        <ul class="tags">
+          <li>Dashboard</li>
+          <li>With Chris Balin</li>
+        </ul>
+      </div>
+    </a>
+  </section>
+
+  {/* Writing section — hidden until first piece is ready. Unwrap to publish.
+  <section class="group" aria-labelledby="writing-label">
+    <h2 class="group-label" id="writing-label">Writing</h2>
+
+    <ol class="entries">
+      <li class="entry">
+        <h3 class="entry-title">What NIST's AI framework and nonprofit evaluation have in common</h3>
+        <p class="entry-desc">
+          Two frameworks from different worlds, asking the same questions in different
+          vocabularies. A side-by-side for people in either field.
+        </p>
+        <ul class="tags">
+          <li>AI governance</li>
+          <li>Evaluation</li>
+        </ul>
+      </li>
+      <li class="entry entry--coming">
+        <span class="entry-flag">Coming soon</span>
+        <h3 class="entry-title">Why nonprofits are forced to evaluate and tech companies aren't</h3>
+        <p class="entry-desc">
+          The incentive structures behind who actually measures their own impact.
+        </p>
+        <ul class="tags">
+          <li>Accountability</li>
+          <li>Policy</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  */}
+
+  <footer class="site-foot">
+    <ul class="contact">
+      <li><a href="https://www.linkedin.com/in/madeleineesmith">LinkedIn</a></li>
+    </ul>
+    <p class="built">Built with Claude</p>
+  </footer>
+</Base>
