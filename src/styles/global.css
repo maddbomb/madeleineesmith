@@ -49,7 +49,7 @@ body::after {
 }
 
 .container {
-    max-width: 660px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -61,7 +61,7 @@ a {
 /* ---------- Header ---------- */
 .intro {
     position: relative;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
 }
 
 h1 {
@@ -71,7 +71,6 @@ h1 {
     line-height: 1.1;
     letter-spacing: -0.01em;
     color: var(--text);
-    margin-bottom: 14px;
 }
 
 .tagline {
@@ -85,24 +84,40 @@ h1 {
 /* ---------- Lede ---------- */
 .lede {
     display: flex;
-    align-items: center;
-    gap: 28px;
+    align-items: flex-start;
+    gap: 56px;
     margin-bottom: 72px;
 }
 
 .portrait {
     flex-shrink: 0;
-    width: 132px;
-    height: 132px;
-    border-radius: 50%;
+    width: 360px;
+    height: auto;
+    border-radius: 12px;
     object-fit: cover;
     object-position: center top;
     border: 0.5px solid var(--border);
+    box-shadow:
+        0 1px 2px rgba(61, 46, 82, 0.06),
+        0 6px 14px -4px rgba(61, 46, 82, 0.10),
+        0 22px 40px -16px rgba(61, 46, 82, 0.18);
 }
 
 .lede-body {
     flex: 1;
     min-width: 0;
+    max-width: 640px;
+}
+
+@media (max-width: 760px) {
+    .lede {
+        flex-direction: column;
+        gap: 28px;
+    }
+    .portrait {
+        width: 100%;
+        max-width: 320px;
+    }
 }
 
 .accent-bar {
@@ -119,6 +134,10 @@ h1 {
     color: var(--text);
 }
 
+.lede p + p {
+    margin-top: 1em;
+}
+
 /* ---------- Section groups ---------- */
 .group {
     margin-bottom: 56px;
@@ -132,6 +151,28 @@ h1 {
     text-transform: uppercase;
     color: var(--label);
     margin-bottom: 18px;
+}
+
+/* ---------- Three-column layout ---------- */
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    margin-bottom: 56px;
+}
+
+.columns .group {
+    margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+    .columns {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .columns .group {
+        margin-bottom: 48px;
+    }
 }
 
 /* ---------- Project (single, hero-card) ---------- */
@@ -162,7 +203,7 @@ h1 {
 .project-hero {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     background-color: #DCE8EE;
     background-image: url('/textures/wash-sky.png');
     background-size: cover;
@@ -171,7 +212,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 36px 56px;
+    padding: 18px 22px;
 }
 
 .project-hero img {
@@ -188,26 +229,26 @@ h1 {
 }
 
 .project-body {
-    padding: 24px 28px 26px;
+    padding: 18px 20px 20px;
 }
 
 .project-title {
     font-family: var(--serif);
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.25;
     color: var(--text);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     letter-spacing: -0.005em;
 }
 
 .project-desc {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.5;
     color: var(--text-muted);
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 }
 
 /* ---------- Writing entries (list, no cards) ---------- */
@@ -218,40 +259,38 @@ h1 {
 
 .entry {
     position: relative;
-    padding: 22px 0 20px;
+    padding: 18px 0 16px;
     border-bottom: 1px solid var(--divider);
 }
 
 .entry-title {
     font-family: var(--serif);
     font-weight: 600;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.3;
     color: var(--text);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     letter-spacing: -0.005em;
-    padding-right: 110px;
 }
 
 .entry-desc {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.5;
     color: var(--text-muted);
-    margin-bottom: 14px;
+    margin-bottom: 0;
 }
 
 .entry-flag {
-    position: absolute;
-    top: 24px;
-    right: 0;
+    display: block;
     font-family: var(--sans);
-    font-size: 10.5px;
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--faded);
+    margin-bottom: 6px;
 }
 
 .entry--coming .entry-title {
