@@ -464,6 +464,9 @@
 
   /* ----------- MAPPING TABLE ----------- */
   .mapping {
+    background: var(--bg-soft);
+    border-radius: 14px;
+    padding: 32px 36px;
     margin: 32px 0 48px;
     max-width: 700px;
   }
@@ -484,6 +487,7 @@
     text-transform: uppercase;
     color: var(--ink-faint);
     font-weight: 500;
+    text-align: center;
   }
 
   .mapping-row {
@@ -491,7 +495,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 32px;
     padding: 18px 0;
-    border-bottom: 1px solid var(--rule-faint);
+    border-bottom: 1px solid var(--rule);
     align-items: baseline;
   }
 
@@ -674,7 +678,7 @@
 
         <h3>Tiered engagement by risk and capacity</h3>
 
-        <p class="tier-intro">I designed a tiered engagement model that assigned each partner a touch level based on two variables: churn risk and data capacity. Not size, not tenure, not ARR-equivalent. The question was simpler. <em>How much support does this partner need to stay in the network and stay reporting?</em></p>
+        <p class="tier-intro">I designed a tiered engagement model that assigned each partner a touch level based on two variables: churn risk and data capacity. The question was simple: <em>How much support does this partner need to stay in the network and continue reporting?</em></p>
 
         <p class="tier-intro">Most customer success orgs segment by revenue first and layer touch model on top. That logic didn't apply here — the partners weren't revenue-differentiated. So the segmentation went straight to the variables that actually predicted retention.</p>
 
