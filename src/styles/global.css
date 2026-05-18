@@ -15,6 +15,7 @@
     --accent: #D85A30;
     --accent-terracotta: #9E6B5A;
     --accent-pacific: #4A7C8A;
+    --accent-amber: #8B6D2F;
 
     /* Tags */
     --pill-bg: #FAEEDA;
@@ -161,11 +162,12 @@ h1 {
 
 .group-label {
     font-family: var(--sans);
-    font-size: 11px;
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--label);
+    color: var(--text);
+    text-align: center;
     margin-bottom: 18px;
 }
 
@@ -309,6 +311,10 @@ h1 {
     margin-bottom: 6px;
 }
 
+.entry-flag--amber {
+    color: var(--accent-amber);
+}
+
 .entry--coming .entry-title,
 .entry--coming .entry-desc {
     color: var(--text-muted);
@@ -382,6 +388,6 @@ h1 {
 .built {
     font-family: var(--sans);
     font-size: 12px;
-    color: var(--faded);
+    color: var(--text);
     letter-spacing: 0.02em;
 }
