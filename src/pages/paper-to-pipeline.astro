@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>When the Product Was the Problem — Madeleine Smith</title>
+<title>From Paper to Pipeline — Madeleine Smith</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -275,7 +275,7 @@
     margin-top: 16px;
   }
 
-  /* ----------- TIER EXPLORER ----------- */
+  /* ----------- NODE EXPLORER ----------- */
   .tier-intro {
     margin-bottom: 40px;
   }
@@ -414,27 +414,17 @@
     color: var(--surface);
   }
 
-  /* ----------- MOVEMENT BLOCK ----------- */
-  .movement-block {
-    background: var(--bg-soft);
-    border-radius: 14px;
-    padding: 32px 36px;
-    margin: 16px 0 32px;
-    max-width: 620px;
-  }
-  .movement-block h4 {
-    font-family: var(--sans);
-    font-size: 11px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    font-weight: 500;
-    margin: 0 0 12px;
-  }
-  .movement-block p {
-    margin: 0;
-    font-style: italic;
+  /* Connector between architecture nodes — implies downward data flow */
+  .node-connector {
+    display: flex;
+    justify-content: center;
     color: var(--ink-soft);
+    opacity: 0.45;
+    margin: -2px 0;
+  }
+  .node-connector svg {
+    width: 18px;
+    height: 18px;
   }
 
   /* ----------- RETENTION CALLOUT ----------- */
@@ -634,9 +624,9 @@
 
   <nav class="sidenav" aria-label="Section navigation">
     <ol>
-      <li><a href="#context" data-target="context">The Network</a></li>
-      <li><a href="#system" data-target="system">The System</a></li>
-      <li><a href="#outcome" data-target="outcome">What Held</a></li>
+      <li><a href="#build" data-target="build">The Build</a></li>
+      <li><a href="#architecture" data-target="architecture">The Architecture</a></li>
+      <li><a href="#held" data-target="held">What Held</a></li>
       <li><a href="#mapping" data-target="mapping">Where It Maps</a></li>
     </ol>
   </nav>
@@ -645,61 +635,59 @@
     <article>
 
       <div class="fade-in">
-        <div class="eyebrow">Case Study</div>
+        <div class="eyebrow">Case Study · Evaluation Infrastructure</div>
       </div>
 
-      <h1 class="fade-in">When the Product Was the Problem</h1>
+      <h1 class="fade-in">From Paper to Pipeline</h1>
 
-      <p class="subtitle fade-in">Designing a tiered engagement model for a 15-partner network with no margin for churn.</p>
+      <p class="subtitle fade-in">Architecting a FERPA-compliant SaaS pipeline for a 150-person youth-serving nonprofit with no centralized data infrastructure.</p>
 
-      <p class="byline fade-in">Madeleine Smith &nbsp;·&nbsp; 2022–2024</p>
+      <p class="byline fade-in">Madeleine Smith &nbsp;·&nbsp; 2025–2026</p>
 
-      <!-- CONTEXT -->
-      <section id="context">
-        <h2>The Network</h2>
+      <!-- BUILD -->
+      <section id="build">
+        <h2>The Build</h2>
 
-        <p>For two years I sat inside the backbone of a federally-funded community initiative — a network of fifteen community-based partner organizations bound together by a single shared reporting framework. The framework was the product I owned. Partners did not love it.</p>
+        <p>For my first year as the founding evaluation director, I sat inside a 150-person youth-serving nonprofit with no centralized data infrastructure. Program records lived in spreadsheets, intake forms ran on paper, and revenue was reconciled by hand. There was no single source of truth — not for participants, not for outcomes, not for revenue. The pilot below is how we built one.</p>
 
-        <p>Most were small, scaling-phase nonprofits with limited data capacity. They weren't paying customers; they were sub-grantees, which gave the relationship compliance teeth. Reporting was the deliverable the funder paid for. A partner walking didn't open a renewal conversation — it eroded the federal grant funding the network. Churn was revenue loss, denominated in grant dollars instead of ARR.</p>
+        <p>The work had federal stakes. Participant data was FERPA-protected — intake forms collected demographics, medical information, and parental consent for students enrolled across in-school program sites. Compliance had to live at the point of capture, not be retrofitted. The pipeline had to be FERPA-clean from the first record.</p>
 
-        <p>The network had launched with twenty partners. By the time I arrived, five had dropped. Each lost partner meant lost services to the neighborhood and gaps in the data the funder was paying for.</p>
-
-        <p>This was one of roughly twenty-five concurrent projects I managed at any given time. The others ran on city departments, executives, boards, internal staff across seven departments, and our compliance overseer — all of whom also needed something from me. Partner retention had to happen inside that wider load.</p>
+        <p>I was a department of one, building cross-functionally with IT, Operations, and executive leadership across siloed program departments. The pilot was scoped to a single department running programs across 7 school sites — 20 staff total — with planned expansion across the org once the architecture proved out.</p>
 
         <div class="stats">
           <div class="stat tall">
-            <div class="stat-figure">15</div>
-            <div class="stat-label">Partner organizations across health, education, economic mobility, and housing.</div>
+            <div class="stat-figure">600+</div>
+            <div class="stat-label">Student intake records flowing through the integrated pipeline by the end of my tenure.</div>
           </div>
           <div class="stat small">
-            <div class="stat-figure">5</div>
-            <div class="stat-label">Partners lost in the years before my tenure (of 20 at launch).</div>
+            <div class="stat-figure">20</div>
+            <div class="stat-label">Summer programs enrolled across two departments via the system.</div>
           </div>
           <div class="stat small">
-            <div class="stat-figure">100+</div>
-            <div class="stat-label">Indicators tracked across the network.</div>
+            <div class="stat-figure">7</div>
+            <div class="stat-label">School sites onboarded in the pilot cohort.</div>
           </div>
         </div>
       </section>
 
-      <!-- SYSTEM -->
-      <section id="system">
-        <h2>The System</h2>
+      <!-- ARCHITECTURE -->
+      <section id="architecture">
+        <h2>The Architecture</h2>
 
-        <h3>Tiered engagement by risk and capacity</h3>
+        <h3>A three-system SaaS pipeline, built end-to-end</h3>
 
-        <p class="tier-intro">I designed a tiered engagement model that assigned each partner a touch level based on two variables: churn risk and data capacity. The question was simple: <em>How much support does this partner need to stay in the network and continue reporting?</em></p>
+        <p class="tier-intro">The pipeline was three SaaS tools connected by API into a single data flow — intake to record to revenue. Each system did one job. The integration carried the work between them so staff didn't have to.</p>
 
-        <p class="tier-intro">Most customer success orgs segment by revenue first and layer touch model on top. That logic didn't apply here — the partners weren't revenue-differentiated. So the segmentation went straight to the variables that actually predicted retention.</p>
+        <p class="tier-intro">FERPA compliance shaped every layer. Data collection had to be permissioned at capture, transmitted securely, and stored with role-based access. The architecture below is what that looked like in practice.</p>
 
         <div class="tier-explorer">
 
-          <!-- TIER 1 -->
+          <!-- NODE 1: FormAssembly -->
           <article class="tier-card tier-1" data-tier="1">
             <button class="tier-head" aria-expanded="false" aria-controls="tier-1-body">
-              <span class="tier-num">Tier 01</span>
-              <span class="tier-name">High-Touch
-                <span class="descriptor">Highest churn risk or lowest capacity</span>
+              <span class="tier-num">Node 01</span>
+              <span class="tier-name">FormAssembly
+                <span class="descriptor">Intake layer</span>
               </span>
               <span class="tier-toggle" aria-hidden="true">
                 <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -710,31 +698,37 @@
             <div class="tier-body" id="tier-1-body">
               <div class="tier-body-inner">
                 <div class="tier-field">
-                  <span class="tier-field-label">Who lived here</span>
-                  <p class="tier-field-body">Partners with leadership turnover, no dedicated data staff, or a track record of missed reporting cycles. The orgs most likely to drop.</p>
+                  <span class="tier-field-label">What it did</span>
+                  <p class="tier-field-body">Front-door data capture. Every participant intake form lived here — demographics, medical information, parental consent forms — built to FERPA standards from the first field.</p>
                 </div>
                 <div class="tier-field">
-                  <span class="tier-field-label">Touch model</span>
-                  <p class="tier-field-body">Weekly or biweekly 1:1s. Listening sessions before any new ask. Direct hands-on support during reporting deadlines.</p>
+                  <span class="tier-field-label">What lived here</span>
+                  <p class="tier-field-body">Participant demographic and medical data, parental consent records, program-specific intake fields per school site.</p>
                 </div>
                 <div class="tier-field">
-                  <span class="tier-field-label">What they got</span>
-                  <p class="tier-field-body">Annotated templates, walked-through documents, ad-hoc trainings calibrated to wherever the partner was stuck that week.</p>
+                  <span class="tier-field-label">Integration</span>
+                  <p class="tier-field-body">Connected to Salesforce via API. Submitted forms wrote records directly into the central database with no manual re-entry.</p>
                 </div>
                 <div class="tier-field">
-                  <span class="tier-field-label">Why it worked</span>
-                  <p class="tier-field-body">The partners most likely to leave got the most of my time. The relationship was the retention mechanism — not the framework, not the dashboard.</p>
+                  <span class="tier-field-label">Why it mattered</span>
+                  <p class="tier-field-body">FERPA compliance had to live at the point of capture, not be retrofitted. Building the intake layer to spec meant the rest of the pipeline inherited compliance by default.</p>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- TIER 2 -->
+          <div class="node-connector" aria-hidden="true">
+            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 3 L9 15 M4 10 L9 15 L14 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- NODE 2: Salesforce -->
           <article class="tier-card tier-2" data-tier="2">
             <button class="tier-head" aria-expanded="false" aria-controls="tier-2-body">
-              <span class="tier-num">Tier 02</span>
-              <span class="tier-name">Mid-Touch
-                <span class="descriptor">Stable, still building capacity</span>
+              <span class="tier-num">Node 02</span>
+              <span class="tier-name">Salesforce
+                <span class="descriptor">Record layer</span>
               </span>
               <span class="tier-toggle" aria-hidden="true">
                 <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -745,31 +739,37 @@
             <div class="tier-body" id="tier-2-body">
               <div class="tier-body-inner">
                 <div class="tier-field">
-                  <span class="tier-field-label">Who lived here</span>
-                  <p class="tier-field-body">Partners who knew the framework and occasionally needed translation. Capacity was growing but uneven; most of the network lived here.</p>
+                  <span class="tier-field-label">What it did</span>
+                  <p class="tier-field-body">The central record store and workflow hub. Every participant record lived here. Program staff worked here daily — enrollment, attendance, outcomes.</p>
                 </div>
                 <div class="tier-field">
-                  <span class="tier-field-label">Touch model</span>
-                  <p class="tier-field-body">Monthly check-ins, structured email campaigns, regular office hours attendance, and ad-hoc 1:1 when something surfaced.</p>
+                  <span class="tier-field-label">What lived here</span>
+                  <p class="tier-field-body">All participant records, program enrollment data, outcome tracking, staff activity logs, role-based permissions.</p>
                 </div>
                 <div class="tier-field">
-                  <span class="tier-field-label">What they got</span>
-                  <p class="tier-field-body">Reporting checklists, deadline calendars, network-wide resources, and shared dashboards. Light personalization on top.</p>
+                  <span class="tier-field-label">Integration</span>
+                  <p class="tier-field-body">Received records from FormAssembly via API; passed payment data to Stripe; served as the single source of truth across the pipeline.</p>
                 </div>
                 <div class="tier-field">
-                  <span class="tier-field-label">Why it worked</span>
-                  <p class="tier-field-body">The system did most of the work. I checked in to surface friction before it became risk — and pulled partners up to Tier 1 when something changed.</p>
+                  <span class="tier-field-label">Why it mattered</span>
+                  <p class="tier-field-body">Replaced disconnected spreadsheets with one database that staff actually worked in. The system stopped being a reporting requirement and started being a daily tool.</p>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- TIER 3 -->
+          <div class="node-connector" aria-hidden="true">
+            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 3 L9 15 M4 10 L9 15 L14 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- NODE 3: Stripe -->
           <article class="tier-card tier-3" data-tier="3">
             <button class="tier-head" aria-expanded="false" aria-controls="tier-3-body">
-              <span class="tier-num">Tier 03</span>
-              <span class="tier-name">Tech-Touch
-                <span class="descriptor">Self-sufficient or running on mature infrastructure</span>
+              <span class="tier-num">Node 03</span>
+              <span class="tier-name">Stripe
+                <span class="descriptor">Revenue layer</span>
               </span>
               <span class="tier-toggle" aria-hidden="true">
                 <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -780,54 +780,49 @@
             <div class="tier-body" id="tier-3-body">
               <div class="tier-body-inner">
                 <div class="tier-field">
-                  <span class="tier-field-label">Who lived here</span>
-                  <p class="tier-field-body">Partners with mature internal data infrastructure, or orgs that had been in the network long enough to operate independently.</p>
+                  <span class="tier-field-label">What it did</span>
+                  <p class="tier-field-body">Payment processing for program fees. Closed the loop from intake to revenue without manual reconciliation.</p>
                 </div>
                 <div class="tier-field">
-                  <span class="tier-field-label">Touch model</span>
-                  <p class="tier-field-body">Plenary meetings, optional office hours, asynchronous communication. Light contact by design.</p>
+                  <span class="tier-field-label">What lived here</span>
+                  <p class="tier-field-body">Transaction records, program fee payments, refund and adjustment history.</p>
                 </div>
                 <div class="tier-field">
-                  <span class="tier-field-label">What they got</span>
-                  <p class="tier-field-body">Standard network resources. They pulled what they needed; the system stayed out of their way unless they pulled it in.</p>
+                  <span class="tier-field-label">Integration</span>
+                  <p class="tier-field-body">Integrated into Salesforce so payments attached to the right participant record automatically. Finance no longer reconciled by hand.</p>
                 </div>
                 <div class="tier-field">
-                  <span class="tier-field-label">Why it worked</span>
-                  <p class="tier-field-body">Protecting their time protected mine. Treating sophisticated partners as sophisticated kept the relationship clean.</p>
+                  <span class="tier-field-label">Why it mattered</span>
+                  <p class="tier-field-body">Revenue capture had been the slowest, most error-prone part of the prior process. Closing that loop inside the pipeline freed up staff time and reduced revenue leakage.</p>
                 </div>
               </div>
             </div>
           </article>
 
         </div>
-
-        <div class="movement-block">
-          <h4>Movement between tiers</h4>
-          <p>Partners moved up when something changed — leadership turnover, capacity loss, a missed reporting cycle. They moved down when they stabilized or matured. The tier was a current read, not a label.</p>
-        </div>
-
-        <p>The model was built to scale the relationship work across a load I couldn't otherwise hold. Office hours and plenaries did one-to-many work. Email campaigns and self-serve materials did tech-touch work. That freed up one-to-one time for the partners where one-to-one was the only thing that would keep them in.</p>
       </section>
 
-      <!-- OUTCOME -->
-      <section id="outcome">
+      <!-- HELD -->
+      <section id="held">
         <h2>What Held</h2>
 
         <div class="retention">
           <div class="retention-figure">100<sup>%</sup></div>
-          <div class="retention-label">Partner retention across both reporting cycles of my tenure. Zero partners dropped. The network had lost a quarter of its partners before I arrived; it lost none during my tenure.</div>
+          <div class="retention-label">Pilot cohort adoption. All 20 staff across the 7 school sites were onboarded and actively using the system by summer registration.</div>
         </div>
 
-        <p>The infrastructure underneath the retention number — shared metric definitions, partner-facing dashboards, co-built governance documents — mattered. But the cleanest signal is the simplest one. None of the fifteen walked.</p>
+        <p>Beyond the pilot cohort, 60+ staff across the wider organization were trained on the system interface through monthly sessions sustained from early winter through spring. Training was the on-ramp; active adoption stayed scoped to the pilot department by design, until expansion.</p>
+
+        <p>By the end of my tenure, 600+ student intake records had flowed through the pipeline, completing enrollment for 20 summer programs across two departments. The system that didn't exist 18 months earlier was now running the org's most regulated program enrollment, end-to-end.</p>
       </section>
 
       <!-- MAPPING -->
       <section id="mapping">
         <h2>Where It Maps</h2>
 
-        <h3>The work was customer success in everything but name.</h3>
+        <h3>The work was SaaS implementation, evaluation infrastructure, and change management at once.</h3>
 
-        <p>The vocabulary was different — partners instead of accounts, sub-grantees instead of customers, compliance instead of contracts. The architecture is the same.</p>
+        <p>Standing up the pipeline meant doing three jobs in parallel — picking and integrating the stack, designing for FERPA at the point of capture, and getting staff to actually use it. Each maps cleanly onto a different role.</p>
 
         <div class="mapping">
           <div class="mapping-header">
@@ -836,33 +831,33 @@
           </div>
 
           <div class="mapping-row">
-            <div class="from">Tiered engagement by risk and capacity</div>
-            <div class="to">Touch-model segmentation</div>
+            <div class="from">Three-system SaaS integration with API + payments</div>
+            <div class="to">End-to-end SaaS implementation / RevOps architecture</div>
           </div>
           <div class="mapping-row">
-            <div class="from">1:1 listening and discovery sessions</div>
-            <div class="to">Executive engagement &amp; QBR motions</div>
+            <div class="from">FERPA-compliant intake design</div>
+            <div class="to">Regulated-industry data implementation</div>
           </div>
           <div class="mapping-row">
-            <div class="from">Office hours and plenaries</div>
-            <div class="to">One-to-many CS motions</div>
+            <div class="from">Department-of-one build inside a 150-person org</div>
+            <div class="to">Solo founding implementation role</div>
           </div>
           <div class="mapping-row">
-            <div class="from">Email campaigns and self-serve materials</div>
-            <div class="to">Scaled CS and at-scale enablement</div>
+            <div class="from">Cohort-based pilot onboarding, 100% adoption</div>
+            <div class="to">Product rollout &amp; change management</div>
           </div>
           <div class="mapping-row">
-            <div class="from">Movement between tiers as risk shifted</div>
-            <div class="to">Health-score-driven prioritization</div>
+            <div class="from">Stripe integration closing the intake-to-revenue loop</div>
+            <div class="to">Revenue operations infrastructure</div>
           </div>
           <div class="mapping-row">
-            <div class="from">100% partner retention across two cycles</div>
-            <div class="to">Logo retention &amp; net retention</div>
+            <div class="from">600+ records through a system that didn't exist 18 months earlier</div>
+            <div class="to">Zero-to-one infrastructure throughput</div>
           </div>
         </div>
 
         <div class="closing">
-          <p><span class="first-letter">T</span>he book was fifteen accounts. The complexity per account was enterprise-equivalent — each partner had its own executive director, board, program staff, compliance obligations, and political stakes, and partner churn meant grant erosion rather than a missed renewal: the nonprofit equivalent of lost ARR. The system I designed for fifteen was built to scale; the principles hold at seventy or one hundred fifty. What changes is the ratio of one-to-one to one-to-many — and the architecture already optimizes for that.</p>
+          <p><span class="first-letter">T</span>he pilot was twenty staff and seven sites. The architecture was built for the full org — 150 people, ten-ish programs, multiple departments. What changes at scale isn't the pipeline; it's the cohort plan that walks each new department through adoption. The system was designed for that from day one.</p>
         </div>
 
       </section>
@@ -871,14 +866,14 @@
 
     <footer>
       <p>Madeleine Smith &nbsp;·&nbsp; San Francisco</p>
-      <p>Customer Success · Program Operations</p>
+      <p>Research, Evaluation &amp; Learning · SaaS Implementation</p>
     </footer>
   </main>
 
 </div>
 
 <script>
-  // Tier expand/collapse
+  // Node expand/collapse
   document.querySelectorAll('.tier-card').forEach(card => {
     const btn = card.querySelector('.tier-head');
     btn.addEventListener('click', () => {
@@ -887,7 +882,7 @@
     });
   });
 
-  // Open the first tier on load for visual cue
+  // Open the first node on load for visual cue
   window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       const first = document.querySelector('.tier-card');
